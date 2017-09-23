@@ -1,0 +1,37 @@
+#masterVision {
+	.image {
+		box-shadow: inset 0px 0px 40px 20px white;
+		background-size: 100%;
+		background-position-y: 30%;
+
+		margin: auto;
+
+		@media only screen and (orientation: portrait){
+			width: 1440px;
+			height: 500px;
+			/*height: 942.05607475px;*/
+		}
+		
+		@media only screen and (orientation: landscape){
+			width: 1440px;
+			height: 500px;
+			/*height: 942.05607475px;*/
+		}
+
+		&.fadeOut {
+			-webkit-transition: opacity 1s ease-in-out;
+		    -moz-transition: opacity 1s ease-in-out;
+		    -ms-transition: opacity 1s ease-in-out;
+		    -o-transition: opacity 1s ease-in-out;
+		    opacity: 0;
+		}
+
+		&.fadeIn {
+			-webkit-transition: opacity 1s ease-in-out;
+		    -moz-transition: opacity 1s ease-in-out;
+		    -ms-transition: opacity 1s ease-in-out;
+		    -o-transition: opacity 1s ease-in-out;
+		    opacity: 1;
+		}
+	}
+}

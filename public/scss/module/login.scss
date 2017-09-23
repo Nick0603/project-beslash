@@ -1,0 +1,34 @@
+#login {
+	margin: auto;
+
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+	box-shadow: inset 0px 0px 40px 20px white;
+	/*background-image: url('./../../images/www.istockphoto.com:photo:get-going-get-growing-gm628265890-111482953.jpg'); */
+	background-size: 100% 100%;
+
+	@media only screen and (orientation: portrait){
+		width: 100vw;
+		height: 65.234375vw;
+	}
+	
+	@media only screen and (orientation: landscape){
+		max-width: 100vw;
+		width: 153.2934131736527vh;
+		height: 100vh;
+	}
+
+	form {
+		@media screen and (max-width: 779px) {
+			color: blue;
+			margin: auto;
+		}
+
+		@media screen and (min-width: 780px) {
+			color: red;
+			margin: auto;
+		}
+	}
+}

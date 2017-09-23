@@ -1,0 +1,27 @@
+#wrapper {
+	display: flex;
+	justify-content: center;
+}
+#index {
+	max-width: 100vw;
+	overflow: hidden;
+}
+#header {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	overflow: hidden;
+}
+#main {
+	margin: auto;
+
+	align-items:center;
+	justify-content:center;
+}
+#footer {
+	.copyright {
+		color: darkgray;
+	}
+}

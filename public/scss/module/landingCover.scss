@@ -1,0 +1,14 @@
+#landingCover {
+	width: 100vw;
+	height: 500px;
+	display: flex;
+	align-items: flex-end;
+	position: absolute;
+	top: 0;
+	background: rgba(0,0,0,0);
+
+	.slogan {
+		color: darkgray;
+		font-size: 36px;
+	}
+}
