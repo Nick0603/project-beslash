@@ -1,0 +1,88 @@
+#latestNews {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	background-color: darkgray;
+
+	.trapezoid-left {
+	    border-color: transparent transparent lightyellow transparent;
+	    border-style: solid solid solid solid;
+	    border-width: 170px;
+	    border-left: initial;
+	    border-top: initial;
+
+	    width: 80px;
+	}
+
+	.trapezoid-right {
+	    border-color: lightyellow transparent transparent transparent;
+	    border-style: solid solid solid solid;
+	    border-width: 170px;
+	    border-right: initial;
+	    border-bottom: initial;
+
+	    width: 300px;
+		margin-left: -95px;
+	}
+
+	.newsTag {
+		margin-top: 40px;
+	}
+
+	.newsTag:nth-child(odd) {
+		margin-left: -250px;
+	}
+
+	.newsTag:nth-child(even) {
+		margin-left: 250px;
+	}
+
+	.newsTag:first-child {
+		margin-top: 20px;
+	}
+
+	.newsTag:nth-child(1) .photo {
+		background-image: url('./../../images/Jeff-Bezos.jpg');
+		background-position-x: 12px;
+		background-color: black;
+	}
+
+	.newsTag:nth-child(2) .photo {
+		background-image: url('./../../images/J.Ronaldo.jpg');
+	}
+
+	.newsTag:nth-child(3) .photo {
+		background-image: url('./../../images/Kahn.jpg');
+	}
+
+	.photo, .intro {
+		z-index: 3;
+		position: absolute;
+	}
+
+	.photo {
+		width: 130px;
+		height: 130px;
+		background-color: pink;
+		border-radius: 100px;
+
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		margin-left: 45px;
+		margin-top: 22px;
+	}
+
+	.intro {
+		width: 250px;
+		height: 170px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: -170px;
+		.content {
+			height: 42px;
+		}
+	}
+}
