@@ -23,7 +23,6 @@
     "helmet": "^3.8.1",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
-    "properties-reader": "0.0.15",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
