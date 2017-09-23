@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #other
+.env
 .DS_Store
 package-lock.json
 
