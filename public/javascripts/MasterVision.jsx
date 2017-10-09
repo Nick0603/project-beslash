@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 class LandingCover extends React.Component {
 	render() {
@@ -14,21 +14,21 @@ class LandingCover extends React.Component {
 
 class MasterVision extends React.Component {
 	constructor(props, context) {
-    	super(props, context);
+    	super(props, context)
 
-		this.imageSwitchfrequency = this.props.imageSwitchfrequency;
-	    this.imagePath = './../../images/';
-	    this.changeImage = this.changeImage.bind(this);
-	    this.imageFadeOut = this.imageFadeOut.bind(this);
-	    this.imageFadeIn = this.imageFadeIn.bind(this);
-	    this.textImg = null;
+		this.imageSwitchfrequency = this.props.imageSwitchfrequency
+	    this.imagePath = '../../images/'
+	    this.changeImage = this.changeImage.bind(this)
+	    this.imageFadeOut = this.imageFadeOut.bind(this)
+	    this.imageFadeIn = this.imageFadeIn.bind(this)
+	    this.textImg = null
 	    this.state = {
 	      carouselImageChangeTimes: 0,
 	      style: {
 	        backgroundImage: 'url(' + this.imagePath + this.props.carouselImages[0] + ')'
 	      },
 	      className: 'image'
-	    };
+	    }
 	}
 
 	componentWillUpdate() {
@@ -45,7 +45,7 @@ class MasterVision extends React.Component {
 		let timeCount = setInterval(
 			async () => {
 				let carouselImageChangeTimes = ++this.state.carouselImageChangeTimes,
-				imageIndex = carouselImageChangeTimes % 5;
+				imageIndex = carouselImageChangeTimes % 5
 
 				this.setState({
 					carouselImageChangeTimes: carouselImageChangeTimes,
@@ -55,7 +55,7 @@ class MasterVision extends React.Component {
 					className: 'image fadeIn'
 				})
 
-				clearInterval(timeCount);
+				clearInterval(timeCount)
 			},
 			1000
 		)
@@ -64,25 +64,25 @@ class MasterVision extends React.Component {
 	changeImage() {
 		setInterval(
 			async () => {
-				await this.imageFadeOut();
-				await this.imageFadeIn();
+				await this.imageFadeOut()
+				await this.imageFadeIn()
 			},
 			this.imageSwitchfrequency
-		);
+		)
 	}
 
 	componentDidMount() {
-		this.changeImage();
+		this.changeImage()
 	}
 
 	componentDidUpdate() {
-		// console.log('componentDidUpdate');
+		// console.log('componentDidUpdate')
 	}
 
 	render() {
 		return (
 			<div id="masterVision">
-				<div ref={(img) => { this.textImg = img; }} className={ this.state.className } style={this.state.style}></div>
+				<div ref={(img) => { this.textImg = img }} className={ this.state.className } style={this.state.style}></div>
 				<LandingCover />
 			</div>
 		)
@@ -99,6 +99,6 @@ MasterVision.defaultProps = {
 		'www.istockphoto.com:photo:microscope-gm478022512-67435915.jpg',
 		'www.istockphoto.com:photo:multiracial-teacher-and-children-in-science-lab-gm642376246-116650755.jpg'
 	]
-};
+}
 
-window.App.MasterVision = MasterVision;
+window.App.MasterVision = MasterVision
